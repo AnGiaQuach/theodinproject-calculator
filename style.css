@@ -1,0 +1,68 @@
+* {
+  font-family: "Roboto";
+}
+.container {
+  height: 500px;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  border: #3e6b89 solid 3px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #cbf9da;
+}
+
+.displayNumber {
+  box-sizing: border-box;
+  height: 65px;
+  border: #122d42 solid 5px;
+  border-radius: 10px;
+  text-align: right;
+  font-size: 42px;
+  color: #081f31;
+}
+
+.dashboard {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.line1,
+.line2,
+.line3,
+.line4,
+.line5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.key {
+  box-sizing: border-box;
+  display: block;
+  width: 96.5px;
+  height: 75px;
+  border-radius: 12px;
+  border: #3e6b89 solid 4px;
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 700;
+  color: #122d42;
+}
+.key .operate {
+  flex-shrink: 0;
+}
+#AC,
+#zero {
+  flex: 1;
+}
+#decimal {
+  font-weight: 700;
+  font-size: 24px;
+  flex: 0.7;
+}
