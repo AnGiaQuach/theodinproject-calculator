@@ -5,6 +5,7 @@ let num2 = "";
 let op = undefined;
 let afterEqual = true;
 let clearNum1 = true;
+const maxNumberLength = 9;
 
 function operating(num1, op, num2) {
   num1 = Number(num1);
@@ -27,11 +28,9 @@ function displayTempAnswer(n1, o, n2) {
   num1 = n1;
   console.log(num1);
   document.querySelector(".displayNumber").textContent = num1;
-  //dom.window.document.getElementById('displayArea') = num1;
 }
 
 function displayNumber(num) {
-  //document.getElementById("displayArea").value = num1;
   document.querySelector(".displayNumber").textContent = num;
 }
 
@@ -65,10 +64,15 @@ for (const key of numberKey) {
         num1 = "";
         clearNum1 = false;
       }
-      num1 += key.textContent;
+      if (num1.length < maxNumberLength) {
+        num1 += key.textContent;
+      }
+
       displayNumber(num1);
     } else {
-      num2 += key.textContent; // add more num
+      if (num2.length < maxNumberLength) {
+        num2 += key.textContent; // add more num
+      }
       displayNumber(num2);
     }
   });
